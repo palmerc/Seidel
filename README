@@ -1,3 +1,7 @@
+## [Fast Polygon Triangulation based on Seidel's Algorithm][0]
+UNC at Chapel Hill
+Department of Computer Science
+
 This program is an implementation of a fast polygon
 triangulation algorithm based on the paper "A simple and fast
 incremental randomized algorithm for computing trapezoidal
@@ -81,12 +85,4 @@ Bibliography:
 Implementation report: Narkhede A. and Manocha D., Fast polygon
  triangulation algorithm based on Seidel's Algorithm, UNC-CH, 1994.
 
--------------------------------------------------------------------
-
-This code is free for non-commercial use only.
-
-UNC-CH GIVES NO WARRANTY, EXPRESSED OR IMPLIED, FOR THE SOFTWARE
-AND/OR DOCUMENTATION PROVIDED, INCLUDING, WITHOUT LIMITATION, WARRANTY
-OF MERCHANTABILITY AND WARRANTY OF FITNESS FOR A PARTICULAR PURPOSE.
-
-- Atul Narkhede (narkhede@cs.unc.edu)
+ [0]: http://www.cs.unc.edu/~dm/CODE/GEM/chapter.html

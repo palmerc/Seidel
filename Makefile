@@ -24,5 +24,5 @@ $(executable): $(objects)
 $(objects): $(inclpath)/triangulate.h
 
 clean:
-	rm -f $(objects)
+	rm -f $(objects) $(executable)
 

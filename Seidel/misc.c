@@ -1,24 +1,23 @@
-#include "triangulate.h"
+#include "misc.h"
+
+#include <stdio.h>
+#include <stdlib.h>
 #include <sys/time.h>
 #include <math.h>
 
-#ifdef __STDC__
-extern double log2(double);
-#else
-extern double log2();
-#endif
+#include "tri.h"
 
 static int choose_idx;
 static int permute[SEGSIZE];
 
 
+
 /* Generate a random permutation of the segments 1..n */
-int generate_random_ordering(n)
-int n;
+int generate_random_ordering(int n)
 {
     struct timeval tval;
     struct timezone tzone;
-    register int i;
+    int i;
     int m, st[SEGSIZE], *p;
 
     choose_idx = 1;
@@ -50,17 +49,12 @@ int choose_segment()
     return permute[choose_idx++];
 }
 
-
-#ifdef STANDALONE
-
 /* Read in the list of vertices from infile */
-int read_segments(filename, genus)
-char *filename;
-int *genus;
+int read_segments(const char *filename, int *genus)
 {
     FILE *infile;
     int ccount;
-    register int i;
+    int i;
     int ncontours, npoints, first, last;
 
     if ((infile = fopen(filename, "r")) == NULL)
@@ -120,14 +114,11 @@ int *genus;
     return i-1;
 }
 
-#endif
-
 
 /* Get log*n for given n */
-int math_logstar_n(n)
-int n;
+int math_logstar_n(int n)
 {
-    register int i;
+    int i;
     double v;
     
     for (i = 0, v = (double) n; v >= 1; i++)
@@ -137,11 +128,9 @@ int n;
 }
 
 
-int math_N(n, h)
-int n;
-int h;
+int math_N(int n, int h)
 {
-    register int i;
+    int i;
     double v;
     
     for (i = 0, v = (int) n; i < h; i++)

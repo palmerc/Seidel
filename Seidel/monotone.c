@@ -1,7 +1,11 @@
-#include "triangulate.h"
+#include "monotone.h"
 
+#include <stdio.h>
 #include <string.h>
 #include <math.h>
+
+#include "tri.h"
+#include "construct.h"
 
 #define CROSS_SINE(v0, v1) ((v0).x * (v1).y - (v1).x * (v0).y)
 #define LENGTH(v0) (sqrt((v0).x * (v0).x + (v0).y * (v0).y))
@@ -89,7 +93,7 @@ int *ip;
 int *iq;
 {
     vertexchain_t *vp0, *vp1;
-    register int i;
+    int i;
     double angle, temp;
     int tp = 0, tq = 0;
 
@@ -140,10 +144,7 @@ int *iq;
  * the current monotone polygon mcur. Split the current polygon into
  * two polygons using the diagonal (v0, v1)
  */
-static int make_new_monotone_poly(mcur, v0, v1)
-int mcur;
-int v0;
-int v1;
+static int make_new_monotone_poly(int mcur, int v0, int v1)
 {
     int p, q, ip, iq;
     int mnew = newmon();
@@ -205,10 +206,9 @@ int v1;
  * the polygon.
  */
 
-int monotonate_trapezoids(n)
-int n;
+int monotonate_trapezoids(int n)
 {
-    register int i;
+    int i;
     int tr_start;
 
     memset((void *)vert, 0, sizeof(vert));
@@ -565,12 +565,9 @@ int dir;
 /* triangulation. */
 /* Take care not to triangulate duplicate monotone polygons */
 
-int triangulate_monotone_polygons(nvert, nmonpoly, op)
-int nvert;
-int nmonpoly;
-int op[][3];
+int triangulate_monotone_polygons(int nvert, int nmonpoly, int op[][3])
 {
-    register int i;
+    int i;
     point_t ymax, ymin;
     int p, vfirst, posmax, posmin, v;
     int vcount, processed;
@@ -666,7 +663,7 @@ int posmax;
 int side;
 int op[][3];
 {
-    register int v;
+    int v;
     int rc[SEGSIZE], ri = 0;	/* reflex chain */
     int endv, tmp, vpos;
     

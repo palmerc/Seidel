@@ -1,51 +1,27 @@
-#include "triangulate.h"
+#include "tri.h"
+
 #include <sys/time.h>
 #include <string.h>
+#include <sys/types.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+
+#include "misc.h"
+#include "construct.h"
+#include "monotone.h"
 
 
-static int initialise(n)
-int n;
+int initialise(int n)
 {
-    register int i;
-
-    for (i = 1; i <= n; i++)
+    for (int i = 1; i <= n; i++) {
         seg[i].is_inserted = FALSE;
+    }
 
     generate_random_ordering(n);
 
     return 0;
 }
-
-#ifdef STANDALONE
-
-int main(argc, argv)
-int argc;
-char *argv[];
-{
-    int n, nmonpoly, genus;
-    int op[SEGSIZE][3], i, ntriangles;
-
-    if ((argc < 2) || ((n = read_segments(argv[1], &genus)) < 0))
-    {
-        fprintf(stderr, "usage: triangulate <filename>\n");
-        exit(1);
-    }
-
-    initialise(n);
-    construct_trapezoids(n);
-    nmonpoly = monotonate_trapezoids(n);
-    ntriangles = triangulate_monotone_polygons(n, nmonpoly, op);
-
-    for (i = 0; i < ntriangles; i++)
-        printf("triangle #%d: %d %d %d\n", i,
-               op[i][0], op[i][1], op[i][2]);
-
-        return 0;
-}
-
-
-#else  /* Not standalone. Use this as an interface routine */
-
 
 /* Input specified as contours.
  * Outer contour must be anti-clockwise.
@@ -70,13 +46,9 @@ char *argv[];
  */
 
 
-int triangulate_polygon(ncontours, cntr, vertices, triangles)
-int ncontours;
-int cntr[];
-double (*vertices)[2];
-int (*triangles)[3];
+int triangulate_polygon(int ncontours, int cntr[], double (*vertices)[2], int (*triangles)[3])
 {
-    register int i;
+    int i;
     int nmonpoly, ccount, npoints, genus;
     int n;
 
@@ -142,8 +114,7 @@ int (*triangles)[3];
  * on the boundary is not consistent!!!
  */
 
-int is_point_inside_polygon(vertex)
-double vertex[2];
+int is_point_inside_polygon(double vertex[2])
 {
     point_t v;
     int trnum, rseg;
@@ -163,6 +134,3 @@ double vertex[2];
     rseg = t->rseg;
     return _greater_than_equal_to(&seg[rseg].v1, &seg[rseg].v0);
 }
-
-
-#endif /* STANDALONE */

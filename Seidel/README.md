@@ -1,8 +1,5 @@
-# [Fast Polygon Triangulation based on Seidel's Algorithm - iOS Edition][0]
-
-This library has been modified for the  purposes of compiling within Xcode and using it within an iOS app.
-
----
+# [Fast Polygon Triangulation based on Seidel's Algorithm][0]
+### UNC at Chapel Hill, Department of Computer Science
 
 This program is an implementation of a fast polygon
 triangulation algorithm based on the paper "[A simple and fast
@@ -53,7 +50,7 @@ defined in your math library, you will have to supply the definition.
     ./triangulate <filename>
 
 
----
+------------------------------------------------------------------
 ## Bibliography:
 
 
@@ -85,9 +82,7 @@ defined in your math library, you will have to supply the definition.
 
 
 
-Implementation report: Narkhede A. and Manocha D., Fast polygon
- triangulation algorithm based on Seidel's Algorithm, UNC-CH, 1994.
+Implementation report: [Narkhede A. and Manocha D., Fast polygon triangulation algorithm based on Seidel's Algorithm, UNC-CH, 1994.][0]
 
  [0]: http://www.cs.unc.edu/~dm/CODE/GEM/chapter.html
  [1]: http://www.sciencedirect.com/science/article/pii/0925772191900124
-

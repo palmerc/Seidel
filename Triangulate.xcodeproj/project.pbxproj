@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C7DE8E4119E125140091D9AC /* construct.c in Sources */ = {isa = PBXBuildFile; fileRef = C7DE8E3919E125140091D9AC /* construct.c */; };
+		C7DE8E4319E125140091D9AC /* misc.c in Sources */ = {isa = PBXBuildFile; fileRef = C7DE8E3C19E125140091D9AC /* misc.c */; };
+		C7DE8E4419E125140091D9AC /* monotone.c in Sources */ = {isa = PBXBuildFile; fileRef = C7DE8E3D19E125140091D9AC /* monotone.c */; };
+		C7DE8E5519E13A5D0091D9AC /* libseidel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7DE8E1F19E1219B0091D9AC /* libseidel.a */; };
+		C7DE8E6B19E13FAE0091D9AC /* tri.c in Sources */ = {isa = PBXBuildFile; fileRef = C7DE8E3F19E125140091D9AC /* tri.c */; };
+		C7DE8E7719E148420091D9AC /* triangulate.c in Sources */ = {isa = PBXBuildFile; fileRef = C7DE8E7419E145BF0091D9AC /* triangulate.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C7DE8E5119E131D50091D9AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7DE8E0919E11E720091D9AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7DE8E1E19E1219B0091D9AC;
+			remoteInfo = Seidel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C7DE8E1D19E1219B0091D9AC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7DE8E4819E131990091D9AC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C7DE8E1F19E1219B0091D9AC /* libseidel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libseidel.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7DE8E2A19E1219B0091D9AC /* SeidelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeidelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7DE8E2D19E1219B0091D9AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7DE8E3919E125140091D9AC /* construct.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = construct.c; sourceTree = "<group>"; };
+		C7DE8E3C19E125140091D9AC /* misc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = misc.c; sourceTree = "<group>"; };
+		C7DE8E3D19E125140091D9AC /* monotone.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = monotone.c; sourceTree = "<group>"; };
+		C7DE8E3F19E125140091D9AC /* tri.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tri.c; sourceTree = "<group>"; };
+		C7DE8E4A19E131990091D9AC /* Triangulate */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Triangulate; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7DE8E6F19E140530091D9AC /* tri.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tri.h; sourceTree = "<group>"; };
+		C7DE8E7019E1412E0091D9AC /* misc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = misc.h; sourceTree = "<group>"; };
+		C7DE8E7119E1420D0091D9AC /* construct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = construct.h; sourceTree = "<group>"; };
+		C7DE8E7219E142470091D9AC /* monotone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = monotone.h; sourceTree = "<group>"; };
+		C7DE8E7419E145BF0091D9AC /* triangulate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = triangulate.c; sourceTree = "<group>"; };
+		C7DE8E7819E149EF0091D9AC /* seidel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = seidel.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C7DE8E1C19E1219B0091D9AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7DE8E2719E1219B0091D9AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7DE8E4719E131990091D9AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7DE8E5519E13A5D0091D9AC /* libseidel.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C7DE8E0819E11E720091D9AC = {
+			isa = PBXGroup;
+			children = (
+				C7DE8E7319E145BF0091D9AC /* Triangulate */,
+				C7DE8E3819E125140091D9AC /* Seidel */,
+				C7DE8E2B19E1219B0091D9AC /* SeidelTests */,
+				C7DE8E2019E1219B0091D9AC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C7DE8E2019E1219B0091D9AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7DE8E1F19E1219B0091D9AC /* libseidel.a */,
+				C7DE8E2A19E1219B0091D9AC /* SeidelTests.xctest */,
+				C7DE8E4A19E131990091D9AC /* Triangulate */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7DE8E2B19E1219B0091D9AC /* SeidelTests */ = {
+			isa = PBXGroup;
+			children = (
+				C7DE8E2C19E1219B0091D9AC /* Supporting Files */,
+			);
+			path = SeidelTests;
+			sourceTree = "<group>";
+		};
+		C7DE8E2C19E1219B0091D9AC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C7DE8E2D19E1219B0091D9AC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C7DE8E3819E125140091D9AC /* Seidel */ = {
+			isa = PBXGroup;
+			children = (
+				C7DE8E7119E1420D0091D9AC /* construct.h */,
+				C7DE8E3919E125140091D9AC /* construct.c */,
+				C7DE8E7019E1412E0091D9AC /* misc.h */,
+				C7DE8E3C19E125140091D9AC /* misc.c */,
+				C7DE8E7219E142470091D9AC /* monotone.h */,
+				C7DE8E3D19E125140091D9AC /* monotone.c */,
+				C7DE8E6F19E140530091D9AC /* tri.h */,
+				C7DE8E3F19E125140091D9AC /* tri.c */,
+				C7DE8E7819E149EF0091D9AC /* seidel.h */,
+			);
+			path = Seidel;
+			sourceTree = "<group>";
+		};
+		C7DE8E7319E145BF0091D9AC /* Triangulate */ = {
+			isa = PBXGroup;
+			children = (
+				C7DE8E7419E145BF0091D9AC /* triangulate.c */,
+			);
+			path = Triangulate;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C7DE8E1E19E1219B0091D9AC /* seidel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7DE8E2E19E1219B0091D9AC /* Build configuration list for PBXNativeTarget "seidel" */;
+			buildPhases = (
+				C7DE8E1B19E1219B0091D9AC /* Sources */,
+				C7DE8E1C19E1219B0091D9AC /* Frameworks */,
+				C7DE8E1D19E1219B0091D9AC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = seidel;
+			productName = Seidel;
+			productReference = C7DE8E1F19E1219B0091D9AC /* libseidel.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C7DE8E2919E1219B0091D9AC /* SeidelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7DE8E3119E1219B0091D9AC /* Build configuration list for PBXNativeTarget "SeidelTests" */;
+			buildPhases = (
+				C7DE8E2619E1219B0091D9AC /* Sources */,
+				C7DE8E2719E1219B0091D9AC /* Frameworks */,
+				C7DE8E2819E1219B0091D9AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SeidelTests;
+			productName = SeidelTests;
+			productReference = C7DE8E2A19E1219B0091D9AC /* SeidelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C7DE8E4919E131990091D9AC /* Triangulate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7DE8E4E19E131990091D9AC /* Build configuration list for PBXNativeTarget "Triangulate" */;
+			buildPhases = (
+				C7DE8E4719E131990091D9AC /* Frameworks */,
+				C7DE8E4619E131990091D9AC /* Sources */,
+				C7DE8E4819E131990091D9AC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7DE8E5219E131D50091D9AC /* PBXTargetDependency */,
+			);
+			name = Triangulate;
+			productName = Triangulate;
+			productReference = C7DE8E4A19E131990091D9AC /* Triangulate */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C7DE8E0919E11E720091D9AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = NTNU;
+				TargetAttributes = {
+					C7DE8E1E19E1219B0091D9AC = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					C7DE8E2919E1219B0091D9AC = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					C7DE8E4919E131990091D9AC = {
+						CreatedOnToolsVersion = 6.0;
+					};
+				};
+			};
+			buildConfigurationList = C7DE8E0C19E11E720091D9AC /* Build configuration list for PBXProject "Triangulate" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C7DE8E0819E11E720091D9AC;
+			productRefGroup = C7DE8E2019E1219B0091D9AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C7DE8E1E19E1219B0091D9AC /* seidel */,
+				C7DE8E2919E1219B0091D9AC /* SeidelTests */,
+				C7DE8E4919E131990091D9AC /* Triangulate */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C7DE8E2819E1219B0091D9AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7DE8E1B19E1219B0091D9AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7DE8E4319E125140091D9AC /* misc.c in Sources */,
+				C7DE8E6B19E13FAE0091D9AC /* tri.c in Sources */,
+				C7DE8E4419E125140091D9AC /* monotone.c in Sources */,
+				C7DE8E4119E125140091D9AC /* construct.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7DE8E2619E1219B0091D9AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7DE8E4619E131990091D9AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7DE8E7719E148420091D9AC /* triangulate.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C7DE8E5219E131D50091D9AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7DE8E1E19E1219B0091D9AC /* seidel */;
+			targetProxy = C7DE8E5119E131D50091D9AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C7DE8E0E19E11E730091D9AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C7DE8E0F19E11E730091D9AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C7DE8E2F19E1219B0091D9AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C7DE8E3019E1219B0091D9AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C7DE8E3219E1219B0091D9AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SeidelTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C7DE8E3319E1219B0091D9AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SeidelTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C7DE8E4F19E131990091D9AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/Seidel";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C7DE8E5019E131990091D9AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/Seidel";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7DE8E0C19E11E720091D9AC /* Build configuration list for PBXProject "Triangulate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7DE8E0E19E11E730091D9AC /* Debug */,
+				C7DE8E0F19E11E730091D9AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7DE8E2E19E1219B0091D9AC /* Build configuration list for PBXNativeTarget "seidel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7DE8E2F19E1219B0091D9AC /* Debug */,
+				C7DE8E3019E1219B0091D9AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7DE8E3119E1219B0091D9AC /* Build configuration list for PBXNativeTarget "SeidelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7DE8E3219E1219B0091D9AC /* Debug */,
+				C7DE8E3319E1219B0091D9AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7DE8E4E19E131990091D9AC /* Build configuration list for PBXNativeTarget "Triangulate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7DE8E4F19E131990091D9AC /* Debug */,
+				C7DE8E5019E131990091D9AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C7DE8E0919E11E720091D9AC /* Project object */;
+}

@@ -1,15 +1,19 @@
-#ifndef _triangulate_h
-#define _triangulate_h
+//
+//  tri.h
+//  Triangulate
+//
+//  Created by Cameron Palmer on 05.10.14.
+//  Copyright (c) 2014 NTNU. All rights reserved.
+//
 
-#include <sys/types.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <math.h>
+#ifndef Triangulate_tri_h
+#define Triangulate_tri_h
+
+#include "seidel.h"
 
 typedef struct {
     double x, y;
 } point_t, vector_t;
-
 
 /* Segment attributes */
 
@@ -70,11 +74,6 @@ typedef struct {
 #define T_SINK  3
 
 
-#define SEGSIZE 200		/* max# of segments. Determines how */
-/* many points can be specified as */
-/* input. If your datasets have large */
-/* number of points, increase this */
-/* value accordingly. */
 
 #define QSIZE   8*SEGSIZE	/* maximum table sizes */
 #define TRSIZE  4*SEGSIZE	/* max# trapezoids */
@@ -128,7 +127,9 @@ typedef struct {
 
 #define FP_EQUAL(s, t) (fabs(s - t) <= C_EPS)
 
+/* Functions */
 
+int initialise(int n);
 
 /* Global variables */
 
@@ -136,23 +137,4 @@ extern node_t qs[QSIZE];		/* Query structure */
 extern trap_t tr[TRSIZE];		/* Trapezoid structure */
 extern segment_t seg[SEGSIZE];		/* Segment table */
 
-
-/* Functions */
-
-extern int monotonate_trapezoids(int);
-extern int triangulate_monotone_polygons(int, int, int (*)[3]);
-
-extern int _greater_than(point_t *, point_t *);
-extern int _equal_to(point_t *, point_t *);
-extern int _greater_than_equal_to(point_t *, point_t *);
-extern int _less_than(point_t *, point_t *);
-extern int locate_endpoint(point_t *, point_t *, int);
-extern int construct_trapezoids(int);
-
-extern int generate_random_ordering(int);
-extern int choose_segment(void);
-extern int read_segments(char *, int *);
-extern int math_logstar_n(int);
-extern int math_N(int, int);
-
-#endif /* triangulate_h */
+#endif

@@ -2,8 +2,7 @@ inclpath = .
 
 CC=gcc
 
-CFLAGS= -UDEBUG -DSTANDALONE -UCLOCK\
-	-I$(inclpath) -L/lib/pa1.1 -g 
+CFLAGS= -UDEBUG -DSTANDALONE -UCLOCK -g 
 
 
 # DEBUG: turn on debugging output
